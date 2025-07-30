@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-// No color palette: Black/white/gray only
+// Color Palette from requirements
+const PALETTE = {
+  primary: '#FF7043',
+  secondary: '#FFA726',
+  accent: '#66BB6A',
+};
 
 // -- Utility function for API calls (placeholder) --
 const API_BASE_URL = "http://localhost:5000/api"; // To be replaced with backend URL
@@ -224,7 +229,7 @@ function App() {
       </div>
       <RecipeDetailModal recipe={selectedRecipe} onClose={handleCloseModal} />
       <footer className="footer">
-        &copy; {new Date().getFullYear()} Recipe Explorer &middot; Built with <span style={{ color: "#181818", fontWeight: 600 }}>React</span>
+        &copy; {new Date().getFullYear()} Recipe Explorer &middot; Built with <span style={{ color: PALETTE.primary }}>React</span>
       </footer>
     </div>
   );
